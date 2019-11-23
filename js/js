@@ -1,0 +1,51 @@
+
+// para hacer carousel
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true
+  });
+
+
+//Obtengo la distancia en la se encuentra la negavación
+var posicionNavegacion = $('nav').offset().top;
+
+//Pregunto cuando se hace scroll
+$(window).on('scroll', function(){
+  
+  //Obtengo la distancia del scroll
+  var posicionScroll = $(window).scrollTop();
+  
+  //Comparo la distancia del scroll con la distancia de la navegacion
+  if(posicionScroll >= posicionNavegacion){
+      $('nav').addClass('navegacion-pegada');
+  }else{
+    $('nav').removeClass('navegacion-pegada')
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
